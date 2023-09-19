@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor.Analyzers.PoC", "Razor.Analyzers.PoC\Razor.Analyzers.PoC.csproj", "{90391480-80A1-4FC3-912A-149007D60FBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor.Analysers.Blazor.Net7.Example", "Razor.Analysers.Blazor.Net7.Example\Razor.Analysers.Blazor.Net7.Example.csproj", "{4FB28FAE-7BB9-4FF9-9803-54E0E6596D09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{B93E629A-58A9-4661-BF7B-F89225B87397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analyzer", "Analyzer", "{443BF1A9-0D23-4FF8-B16B-9F0BF5493482}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{98E07A2E-EBB7-40A4-982A-58C447C1D158}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90391480-80A1-4FC3-912A-149007D60FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90391480-80A1-4FC3-912A-149007D60FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90391480-80A1-4FC3-912A-149007D60FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90391480-80A1-4FC3-912A-149007D60FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB28FAE-7BB9-4FF9-9803-54E0E6596D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB28FAE-7BB9-4FF9-9803-54E0E6596D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB28FAE-7BB9-4FF9-9803-54E0E6596D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB28FAE-7BB9-4FF9-9803-54E0E6596D09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90391480-80A1-4FC3-912A-149007D60FBA} = {443BF1A9-0D23-4FF8-B16B-9F0BF5493482}
+		{4FB28FAE-7BB9-4FF9-9803-54E0E6596D09} = {B93E629A-58A9-4661-BF7B-F89225B87397}
+	EndGlobalSection
+EndGlobal

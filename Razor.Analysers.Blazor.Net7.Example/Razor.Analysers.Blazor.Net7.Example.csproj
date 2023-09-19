@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include=".\**\*g.cs">
+      <Link>Generated\%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Remove=".\obj\Debug\net7.0\Razor.Analysers.Blazor.Net7.Example.GlobalUsings.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\App_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages_Counter_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages_Error_cshtml.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages_Event_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages_FetchData_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages_Index_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages_UnusedPrivateMemberRazor_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Pages__Host_cshtml.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Shared_MainLayout_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Shared_NavMenu_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Shared_SurveyPrompt_razor.g.cs" />
+    <Content Remove=".\obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\_Imports_razor.g.cs" />
+    <Content Update="Pages\Counter.razor">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Razor.Analyzers.PoC\Razor.Analyzers.PoC.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" SetTargetFramework="TargetFramework=netstandard2.0" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.20" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.10.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="obj\Debug\net7.0\" />
+    <Folder Include="obj\SourceGeneratorFiles\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\" />
+  </ItemGroup>
+</Project>
